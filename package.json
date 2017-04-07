@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"gulp-pixrem",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "gulp-pixrem",
+    "description": "api documentation for [gulp-pixrem (v1.0.0)](https://github.com/gummesson/gulp-pixrem) [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-pixrem.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-pixrem) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-pixrem.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-pixrem)",
     "devDependencies": {
-        "gulp-pixrem": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "gulp-pixrem": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-gulp-pixrem",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-gulp-pixrem",
+    "keywords": [
+        "documentation",
+        "gulp-pixrem"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_gulp_pixrem.js",
+    "name": "npmdoc-gulp-pixrem",
+    "nameAlias": "npmdoc_gulp_pixrem",
+    "nameOriginal": "npmdoc-gulp-pixrem",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-gulp-pixrem"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
