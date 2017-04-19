@@ -61,12 +61,75 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-pixrem">module gulp-pixrem</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-pixrem.gulp-pixrem">
+            function <span class="apidocSignatureSpan"></span>gulp-pixrem
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.gulp-pixrem" id="apidoc.module.gulp-pixrem">module gulp-pixrem</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-pixrem.gulp-pixrem" id="apidoc.element.gulp-pixrem.gulp-pixrem">
+        function <span class="apidocSignatureSpan"></span>gulp-pixrem
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gulp-pixrem = function (options) {
+  options = options || {};
+
+  var stream = through.obj(transform);
+
+  function transform(file, encoding, done) {
+    if (file.isNull()) {
+      this.push(file);
+      return done();
+    }
+
+    if (file.isStream()) {
+      this.emit(&#x27;error&#x27;, new gutil.PluginError(&#x27;gulp-pixrem&#x27;, &#x27;Streaming not supported&#x27;));
+      return done();
+    }
+
+    try {
+      var settings = assign({
+        map: file.sourceMap ? { annotation: false } : false,
+        from: file.relative,
+        to: file.relative
+      }, options);
+
+      var results = postcss([pixrem(settings)]).process(file.contents.toString()).css;
+
+      if (results.map &#x26;&#x26; file.sourceMap) {
+        applySourceMap(file, results.map.toString());
+        file.contents = new Buffer(results.css);
+      } else {
+        file.contents = new Buffer(results);
+      }
+
+    } catch (err) {
+      this.emit(&#x27;error&#x27;, new gutil.PluginError(&#x27;gulp-pixrem&#x27;, err));
+    }
+
+    this.push(file);
+    done();
+  }
+
+  return stream;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 

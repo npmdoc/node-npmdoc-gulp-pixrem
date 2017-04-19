@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/gummesson/gulp-pixrem"
-
-    >gulp-pixrem (v1.0.0)</a>
+    <a href="https://github.com/gummesson/gulp-pixrem">gulp-pixrem (v1.0.0)</a>
 </h1>
 <h4>Pixrem plugin for gulp.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-pixrem">module gulp-pixrem</a><ol>
 
@@ -97,7 +90,7 @@
     }
 
     if (file.isStream()) {
-      this.emit(&#x27;error&#x27;, new gutil.PluginError(&#x27;gulp-pixrem&#x27;, &#x27;Streaming not supported&#x27;));
+      this.emit('error', new gutil.PluginError('gulp-pixrem', 'Streaming not supported'));
       return done();
     }
 
@@ -110,7 +103,7 @@
 
       var results = postcss([pixrem(settings)]).process(file.contents.toString()).css;
 
-      if (results.map &#x26;&#x26; file.sourceMap) {
+      if (results.map &amp;&amp; file.sourceMap) {
         applySourceMap(file, results.map.toString());
         file.contents = new Buffer(results.css);
       } else {
@@ -118,7 +111,7 @@
       }
 
     } catch (err) {
-      this.emit(&#x27;error&#x27;, new gutil.PluginError(&#x27;gulp-pixrem&#x27;, err));
+      this.emit('error', new gutil.PluginError('gulp-pixrem', err));
     }
 
     this.push(file);
@@ -139,3 +132,4 @@
     ]
 </div>
 </div>
+</body></html>
