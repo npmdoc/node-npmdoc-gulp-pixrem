@@ -1,9 +1,14 @@
-# api documentation for  [gulp-pixrem (v1.0.0)](https://github.com/gummesson/gulp-pixrem)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-pixrem.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-pixrem) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-pixrem.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-pixrem)
+# npmdoc-gulp-pixrem
+
+#### api documentation for  [gulp-pixrem (v1.0.0)](https://github.com/gummesson/gulp-pixrem)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-pixrem.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-pixrem) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-pixrem.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-pixrem)
+
 #### Pixrem plugin for gulp.
 
-[![NPM](https://nodei.co/npm/gulp-pixrem.png?downloads=true)](https://www.npmjs.com/package/gulp-pixrem)
+[![NPM](https://nodei.co/npm/gulp-pixrem.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-pixrem)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-pixrem/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-gulp-pixrem_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-pixrem/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-gulp-pixrem/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-gulp-pixrem/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-pixrem/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-pixrem/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-gulp-pixrem/build/screenCapture.npmPackageListing.svg)
 
@@ -52,13 +57,11 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "gummesson",
-            "email": "ellengummesson@gmail.com"
+            "name": "gummesson"
         }
     ],
     "name": "gulp-pixrem",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/gummesson/gulp-pixrem.git"
@@ -69,16 +72,6 @@
     "version": "1.0.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module gulp-pixrem](#apidoc.module.gulp-pixrem)
-
-
-
-# <a name="apidoc.module.gulp-pixrem"></a>[module gulp-pixrem](#apidoc.module.gulp-pixrem)
 
 
 
